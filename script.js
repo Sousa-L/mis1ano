@@ -230,7 +230,7 @@ AFRAME.registerComponent("gesture-handler", {
       return numberNames[Math.min(touchCount, 4) - 1];
     }
   });
-  
+  /*
   AFRAME.registerComponent('markerhandler', {
     init: function () {
       this.el.sceneEl.addEventListener('markerFound', () => {
@@ -239,3 +239,4 @@ AFRAME.registerComponent("gesture-handler", {
       })
     }
   });
+  */
