@@ -1,56 +1,70 @@
 <html>
     <head>
-        <meta name="apple-mobile-web-app-title" content="CodePen">
+        <title>MIS 1 Ano</title>
+
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-title" content="MIS1Ano">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Scripts -->
+        <script src="gesture-handler.js"></script>
+        <script src="gesture-detector.js"></script>
+
+        <!-- Scripts do AR.js -->
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
         <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-        <script src="script.js"></script>
-        <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
-
-
-        <!-- rawgithack development URL -->
         <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
     </head>
-    <body style='margin : 0px; overflow: hidden;'>
+    <body>
     <!-- minimal loader shown until image descriptors are loaded -->
-        <a-scene
-            vr-mode-ui="enabled: false;"
-            renderer="logarithmicDepthBuffer: true;"
-            embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; '
-            vr-mode-ui="enabled: false"
-            gesture-detector
-            id="scene">
+        <div class="container">
+            <a-scene
+                vr-mode-ui="enabled: false;"
+                renderer="logarithmicDepthBuffer: true;"
+                embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; '
+                vr-mode-ui="enabled: false"
+                gesture-detector
+                id="scene">
 
-            <a-assets>
-                <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
-            </a-assets>
+                <a-assets>
+                    <a-asset-item id="mis-lion" src="assets/lion.gltf"></a-asset-item>
+                </a-assets>
 
-            <a-marker type='barcode' value='7'>
-                <a-box position='0 0.5 0' color="yellow"></a-box>
-            </a-marker>
-        
-        <a-marker markerhandler type='barcode' value='8'>
-                <a-box position='0 0.5 0' color="yellow"></a-box>
-            </a-marker>
+                <a-marker type='barcode' value='7'>
+                    <a-box position='0 0.5 0' color="yellow"></a-box>
+                </a-marker>
+            
+                <a-marker markerhandler type='barcode' value='8'>
+                    <a-box position='0 0.5 0' color="yellow"></a-box>
+                </a-marker>
 
-            <a-marker id="animated-marker" type='barcode' value='6' smooth="true"
-                smoothCount="10"
-                smoothTolerance=".01"
-                smoothThreshold="5"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;">
-                <a-entity
-                    gltf-model="#animated-asset"
-                    scale="2 2 2" class="clickable"
-                    gesture-handler
-                        >
-                </a-entity>
-            </a-marker>
+                <a-marker 
+                    id="animated-marker" 
+                    type='barcode' 
+                    value='6' 
+                    smooth="true"
+                    smoothCount="10"
+                    smoothTolerance=".01"
+                    smoothThreshold="5"
+                    raycaster="objects: .clickable"
+                    emitevents="true"
+                    cursor="fuse: false; rayOrigin: mouse;">
+                    <a-entity
+                        gltf-model="#mis-lion"
+                        scale="2 2 2" class="clickable"
+                        gesture-handler>
+                    </a-entity>
+                </a-marker>
 
-            <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
-            <a-entity camera></a-entity>
-        </a-scene>
+                <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
+                <a-entity camera></a-entity>
+            </a-scene>
+        </div>
     </body>
 </html>
