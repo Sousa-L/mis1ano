@@ -25,9 +25,9 @@
     <!-- minimal loader shown until image descriptors are loaded -->
         <div class="container">
             <a-scene
-                vr-mode-ui="enabled: false;"
+                arjs
+                embedded
                 renderer="logarithmicDepthBuffer: true;"
-                embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; '
                 vr-mode-ui="enabled: false"
                 gesture-detector
                 id="scene">
@@ -48,16 +48,14 @@
                     id="animated-marker" 
                     type='barcode' 
                     value='6' 
-                    smooth="true"
-                    smoothCount="10"
-                    smoothTolerance=".01"
-                    smoothThreshold="5"
                     raycaster="objects: .clickable"
                     emitevents="true"
                     cursor="fuse: false; rayOrigin: mouse;">
                     <a-entity
                         gltf-model="#mis-lion"
-                        scale="0.5 0.5 0.5" class="clickable"
+                        scale="0.5 0.5 0.5" 
+                        position="0 0 0"
+                        class="clickable"
                         gesture-handler>
                     </a-entity>
                 </a-marker>
