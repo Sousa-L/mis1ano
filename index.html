@@ -5,70 +5,71 @@
   <title>CodePen - Marker MIS</title>
    <!-- Meta Tags -->
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-        <link rel="stylesheet" href="./css/reset.css">
-        <link rel="stylesheet" href="./css/styles.css">
+  
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    <script  src="./src/functions.js"></script>
+
 
 <!-- rawgithack development URL -->
 <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
 
 <body style='margin : 0px; overflow: hidden;'>
    <!-- minimal loader shown until image descriptors are loaded -->
-   <div class="container">
-        <nav class="tela">
-            <img onclick="handleClick()" class="botaoAjuda" src="./assets/questionMark.png">
-            <span onclick="" class="textoAuxiliar">Aponte sua câmera para um dos códigos dispostos no livro</span>
-            <span id="textoSuporte" class="textoSuporte" style="display: none;">
-                Ao ler o QR code, você vai ser redirecionado pra uma de nossas interações. Caso a câmera não esteja reconhecendo o 
-                símbolo, certifique-se que a câmera está próxima o suficiente e tente novamente.
-            </span>
-        </nav>
-        <a-scene
-            vr-mode-ui="enabled: false;"
-            renderer="logarithmicDepthBuffer: true;"
-            embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; '
-            vr-mode-ui="enabled: false"
-            gesture-detector
-            id="scene">
+    <a-scene
+        vr-mode-ui="enabled: false;"
+        renderer="logarithmicDepthBuffer: true;"
+        embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; '
+             vr-mode-ui="enabled: false"
+  gesture-detector
+  id="scene">
 
-            <a-assets>
-                <a-asset-item id="animated-asset" src="assets/lion.glb"></a-asset-item>
-            </a-assets>
-            <a-marker type='barcode' value='7'>
-                <a-box position='0 0.5 0' color="yellow"></a-box>
-            </a-marker>
-            <a-marker type='barcode' value='8'>
-                <a-box position='0 0.5 0' color="yellow"></a-box>
-            </a-marker>
-            <a-marker 
-                id="animated-marker" 
-                type='barcode' 
-                value='6' 
-                smooth="true"
-                smoothCount="10"
-                smoothTolerance=".01"
-                smoothThreshold="5"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;">
-                <a-entity
-                    gltf-model="#animated-asset"
-                    scale="2 2 2" class="clickable"
-                    gesture-handler>
-                </a-entity>
-            </a-marker>
-           <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
-            <a-entity camera></a-entity>
-        </a-scene>
-    </div>
+        <a-assets>
+            <a-asset-item id="animated-asset" src="assets/Abstração.glb"></a-asset-item>
+        </a-assets>
+
+        <a-nft
+      type="nft"
+      url="assets/test"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+      raycaster="objects: .clickable"
+      emitevents="true"
+      cursor="fuse: false; rayOrigin: mouse;">
+            <a-box position='0 0.5 0' color="yellow"></a-box>
+        </a-nft>
+      
+      <a-marker type='barcode' value='8'>
+            <a-box position='0 0.5 0' color="yellow"></a-box>
+        </a-marker>
+
+        <a-marker id="animated-marker" type='barcode' value='6' smooth="true"
+    smoothCount="10"
+    smoothTolerance=".01"
+    smoothThreshold="5"
+    raycaster="objects: .clickable"
+    emitevents="true"
+    cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity
+                gltf-model="#animated-asset"
+                scale="0.5 0.5 0.5" class="clickable"
+      gesture-handler
+                      >
+            </a-entity>
+        </a-marker>
+
+        <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
+        <a-entity camera></a-entity>
+    </a-scene>
 </body>
+<!-- partial -->
   <script  src="./script.js"></script>
+
 </body>
 </html>
