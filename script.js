@@ -231,11 +231,26 @@ AFRAME.registerComponent("gesture-detector", {
   }
 });
 
-AFRAME.registerComponent('markerhandler', {
-  init: function () {
-    this.el.sceneEl.addEventListener('markerFound', () => {
-      // redirect to custom URL e.g. google.com
-      window.location = 'https://www.google.com/';
-    })
-  }
+//AFRAME.registerComponent('markerhandler', {
+//  init: function () {
+//    this.el.sceneEl.addEventListener('markerFound', () => {
+//      // redirect to custom URL e.g. google.com
+//      window.location = 'https://www.google.com/';
+//    })
+//  }
+//});
+
+const arController = document.querySelector("a-scene").systems.arjs._arSession.arContext.arController;
+
+arController.addEventListener("getMarker", (evt) => {
+    const markerType = evt.data.type;
+    const patternType = 8;
+
+    //console.log("onMarkerFound!!");
+
+    if (markerType == patternType) {
+        console.log("onMarkerFound out pattern!!");
+
+        //Do stuff...
+    }
 });
