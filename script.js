@@ -255,7 +255,7 @@ AFRAME.registerComponent('registerevents6', {
 
     marker.addEventListener('markerFound', function() {
       var markerId = marker.id;
-      console.log("6");
+      window.location.href = "http://www.w3schools.com";
       // TODO: Add your own code here to react to the marker being found.
     });
 
