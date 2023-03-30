@@ -248,7 +248,7 @@ AFRAME.registerComponent('registerevents', {
     });
   }
 });
-
+/*
 AFRAME.registerComponent('registerevents6', {
   init: function () {
     var marker = this.el;
@@ -266,4 +266,4 @@ AFRAME.registerComponent('registerevents6', {
       // TODO: Add your own code here to react to the marker being lost.
     });
   }
-});
+});*/
