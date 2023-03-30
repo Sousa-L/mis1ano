@@ -256,12 +256,13 @@ AFRAME.registerComponent('registerevents6', {
     marker.addEventListener('markerFound', function() {
       var markerId = marker.id;
       window.location.href = "http://www.w3schools.com";
+      console.log("Test");
       // TODO: Add your own code here to react to the marker being found.
     });
 
     marker.addEventListener('markerLost', function() {
       var markerId = marker.id;
-      console.log('markerLost', markerId);
+      //console.log('markerLost', markerId);
       // TODO: Add your own code here to react to the marker being lost.
     });
   }
