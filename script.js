@@ -246,7 +246,7 @@ arController.addEventListener("getMarker", (evt) => {
     const markerType = evt.data.type;
     const patternType = 8;
 
-    //console.log("onMarkerFound!!");
+    console.log("onMarkerFound!!");
 
     if (markerType == patternType) {
         console.log("onMarkerFound out pattern!!");
