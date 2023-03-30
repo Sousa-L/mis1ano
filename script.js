@@ -237,7 +237,25 @@ AFRAME.registerComponent('registerevents', {
 
     marker.addEventListener('markerFound', function() {
       var markerId = marker.id;
-      console.log(markerId);
+      console.log("8");
+      // TODO: Add your own code here to react to the marker being found.
+    });
+
+    marker.addEventListener('markerLost', function() {
+      var markerId = marker.id;
+      console.log('markerLost', markerId);
+      // TODO: Add your own code here to react to the marker being lost.
+    });
+  }
+});
+
+AFRAME.registerComponent('registerevents6', {
+  init: function () {
+    var marker = this.el;
+
+    marker.addEventListener('markerFound', function() {
+      var markerId = marker.id;
+      console.log("6");
       // TODO: Add your own code here to react to the marker being found.
     });
 
