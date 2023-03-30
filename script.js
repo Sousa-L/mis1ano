@@ -231,26 +231,20 @@ AFRAME.registerComponent("gesture-detector", {
   }
 });
 
-//AFRAME.registerComponent('markerhandler', {
-//  init: function () {
-//    this.el.sceneEl.addEventListener('markerFound', () => {
-//      // redirect to custom URL e.g. google.com
-//      window.location = 'https://www.google.com/';
-//    })
-//  }
-//});
+AFRAME.registerComponent('registerevents', {
+  init: function () {
+    var marker = this.el;
 
-const arController = document.querySelector("a-scene").systems.arjs._arSession.arContext.arController;
+    marker.addEventListener('markerFound', function() {
+      var markerId = marker.id;
+      console.log('markerFound', markerId);
+      // TODO: Add your own code here to react to the marker being found.
+    });
 
-arController.addEventListener("getMarker", (evt) => {
-    const markerType = evt.data.type;
-    const patternType = 8;
-
-    console.log("onMarkerFound!!");
-
-    if (markerType == patternType) {
-        console.log("onMarkerFound out pattern!!");
-
-        //Do stuff...
-    }
+    marker.addEventListener('markerLost', function() {
+      var markerId = marker.id;
+      console.log('markerLost', markerId);
+      // TODO: Add your own code here to react to the marker being lost.
+    });
+  }
 });
