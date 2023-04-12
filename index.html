@@ -31,6 +31,8 @@
         <a-assets>
             <a-asset-item id="animated-asset" src="assets/scene.gltf"></a-asset-item>
             <a-asset-item id="abs-asset" src="assets/Abstração.glb"></a-asset-item>
+            <a-asset-item id="low-asset" src="assets/LOWPOLY.gltf"></a-asset-item>
+            <a-asset-item id="exis-asset" src="assets/Eixos.gltf"></a-asset-item>
         </a-assets>
 
         <a-nft
@@ -74,6 +76,34 @@
     cursor="fuse: false; rayOrigin: mouse;">
             <a-entity
                 gltf-model="#abs-asset"
+                scale="0.5 0.5 0.5" class="clickable"
+                gesture-handler>
+            </a-entity>
+        </a-marker>
+
+        <a-marker registerevents6 id="animated-marker" type='barcode' value='1' smooth="true"
+    smoothCount="10"
+    smoothTolerance=".01"
+    smoothThreshold="5"
+    raycaster="objects: .clickable"
+    emitevents="true"
+    cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity
+                gltf-model="#low-asset"
+                scale="0.5 0.5 0.5" class="clickable"
+                gesture-handler>
+            </a-entity>
+        </a-marker>
+
+        <a-marker registerevents6 id="animated-marker" type='barcode' value='2' smooth="true"
+    smoothCount="10"
+    smoothTolerance=".01"
+    smoothThreshold="5"
+    raycaster="objects: .clickable"
+    emitevents="true"
+    cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity
+                gltf-model="#exis-asset"
                 scale="0.5 0.5 0.5" class="clickable"
                 gesture-handler>
             </a-entity>
