@@ -238,6 +238,7 @@ AFRAME.registerComponent('registerevents', {
     marker.addEventListener('markerFound', function() {
       var markerId = marker.id;
       console.log("6");
+      window.location.href = "/construction";
       // TODO: Add your own code here to react to the marker being found.
     });
 
