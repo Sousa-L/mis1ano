@@ -46,7 +46,11 @@
         border:solid red;
         }
         video{
-        object-fit:fill
+        object-fit:fill;
+        z-index: 0;
+        }
+        button{
+            z-index: 1;
         }
     </style>
     
@@ -54,7 +58,7 @@
 </head>
 <body>
     <div>
-        <button position="absolute" type="button" class="btn">Basic</button>
+        <button type="button" class="btn">Basic</button>
     </div>
     <video loop autoplay poster="../assets/posters/construction.jpg" id="my-video"
     class="video-js"
