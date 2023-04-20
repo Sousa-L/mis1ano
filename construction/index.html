@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>CodePen - Marker MIS</title>
+
+    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
     <!-- Meta Tags -->
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
@@ -17,7 +19,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <style>
-        .videoBg{
+        .video-js{
             position:absolute;
             top: 0;
             left: 0;
@@ -26,13 +28,13 @@
         }
 
         @media (min-aspect-ratio: 16/9) {
-        .videoBg{
+        .video-js{
             width: 100%;
             height: auto;
         }
         }
         @media (max-aspect-ratio: 16/9) {
-        .videoBg {
+        .video-js {
         
         width:100%; 
             height: 100%;
@@ -51,9 +53,14 @@
 
 </head>
 <body>
-    <video loop autoplay poster="../assets/videos/construction.mp4" class="videoBg">
+    <video loop autoplay poster="../assets/videos/construction.mp4" id="my-video"
+    class="video-js"
+    controls
+    data-setup="{}"
+    preload="auto">
 
         <source src="../assets/videos/construction.mp4" type="video/mp4">
 
     </video>
+    <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
 </body>
