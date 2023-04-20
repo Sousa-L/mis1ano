@@ -34,25 +34,12 @@
             <a-asset-item id="low-asset" src="assets/LOWPOLY.gltf"></a-asset-item>
             <a-asset-item id="exis-asset" src="assets/Eixos.gltf"></a-asset-item>
         </a-assets>
-
-        <a-nft
-      type="nft"
-      url="assets/test"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5"
-      raycaster="objects: .clickable"
-      emitevents="true"
-      cursor="fuse: false; rayOrigin: mouse;">
-            <a-box position='0 0.5 0' color="yellow"></a-box>
-        </a-nft>
       
-      <a-marker registerevents type='barcode' value='8'>
+      <a-marker type='barcode' value='8'>
             <a-box position='0 0.5 0' color="yellow"></a-box>
         </a-marker>
 
-        <a-marker registerevents6 id="animated-marker" type='barcode' value='6' smooth="true"
+        <a-marker registerevents id="animated-marker" type='barcode' value='6' smooth="true"
     smoothCount="10"
     smoothTolerance=".01"
     smoothThreshold="5"

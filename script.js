@@ -237,7 +237,7 @@ AFRAME.registerComponent('registerevents', {
 
     marker.addEventListener('markerFound', function() {
       var markerId = marker.id;
-      console.log("8");
+      console.log("6");
       // TODO: Add your own code here to react to the marker being found.
     });
 
