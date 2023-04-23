@@ -30,9 +30,11 @@
 
         <a-assets>
             <a-asset-item id="animated-asset" src="assets/scene.gltf"></a-asset-item>
+            <a-asset-item id="animated-maquete" src="assets/maquete.gltf"></a-asset-item>
             <a-asset-item id="abs-asset" src="assets/Abstração.glb"></a-asset-item>
             <a-asset-item id="low-asset" src="assets/LOWPOLY.gltf"></a-asset-item>
             <a-asset-item id="exis-asset" src="assets/Eixos.gltf"></a-asset-item>
+            <audio id="sound" src="assets/audio/maquete.mp3" preload="auto"></audio>
         </a-assets>
       
       <a-marker type='barcode' value='8'>
@@ -71,6 +73,21 @@
                 gesture-handler>
             </a-entity>
             -->
+        </a-marker>
+
+        <a-marker registerevents14 id="animated-marker" type='barcode' value='14' smooth="true"
+    smoothCount="10"
+    smoothTolerance=".01"
+    smoothThreshold="5"
+    raycaster="objects: .clickable"
+    emitevents="true"
+    cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity
+                gltf-model="#animated-maquete"
+                scale="8 8 8" class="clickable"
+                animation-mixer="clip: Take 001; loop:repeat"
+                gesture-handler>
+            </a-entity>
         </a-marker>
 
         <a-marker registerevents6 id="animated-marker" type='barcode' value='10' smooth="true"
@@ -116,7 +133,8 @@
         </a-marker>
 
         <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
-        <a-entity camera></a-entity>
+            <a-entity sound="src: #sound" autoplay="false"></a-entity>
+            <a-entity camera></a-entity>
     </a-scene>
 </body>
 <!-- partial -->
