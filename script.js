@@ -238,7 +238,26 @@ AFRAME.registerComponent('registerevents', {
     marker.addEventListener('markerFound', function() {
       var markerId = marker.id;
       console.log("6");
-      window.location.href = "/mis1ano/construction";
+      window.location.href = "/mis1ano/construcao";
+      // TODO: Add your own code here to react to the marker being found.
+    });
+
+    marker.addEventListener('markerLost', function() {
+      var markerId = marker.id;
+      console.log('markerLost', markerId);
+      // TODO: Add your own code here to react to the marker being lost.
+    });
+  }
+});
+
+AFRAME.registerComponent('registerevents7', {
+  init: function () {
+    var marker = this.el;
+
+    marker.addEventListener('markerFound', function() {
+      var markerId = marker.id;
+      console.log("7");
+      window.location.href = "/mis1ano/praca";
       // TODO: Add your own code here to react to the marker being found.
     });
 
