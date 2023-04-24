@@ -290,6 +290,27 @@ AFRAME.registerComponent('registerevents14', {
   }
 });
 
+AFRAME.registerComponent('registerevents18', {
+  init: function () {
+    var marker = this.el;
+    var entity = document.querySelector('[lab_rest]');
+
+    marker.addEventListener('markerFound', function() {
+      var markerId = marker.id;
+      console.log("14");
+      entity.components.sound.playSound();
+      // TODO: Add your own code here to react to the marker being found.
+    });
+
+    marker.addEventListener('markerLost', function() {
+      var markerId = marker.id;
+      console.log('markerLost', markerId);
+      entity.components.sound.pauseSound();
+      // TODO: Add your own code here to react to the marker being lost.
+    });
+  }
+});
+
 AFRAME.registerComponent('registerevents13', {
   init: function () {
     var marker = this.el;
