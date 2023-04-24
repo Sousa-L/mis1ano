@@ -297,7 +297,7 @@ AFRAME.registerComponent('registerevents18', {
 
     marker.addEventListener('markerFound', function() {
       var markerId = marker.id;
-      console.log("14");
+      console.log("18");
       entity.components.sound.playSound();
       // TODO: Add your own code here to react to the marker being found.
     });
