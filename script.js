@@ -311,13 +311,13 @@ AFRAME.registerComponent('registerevents18', {
   }
 });
 
-AFRAME.registerComponent('registerevents12', {
+AFRAME.registerComponent('registerevents13', {
   init: function () {
     var marker = this.el;
 
     marker.addEventListener('markerFound', function() {
       var markerId = marker.id;
-      console.log("12");
+      console.log("13");
       window.location.href = "/mis1ano/inauguracao";
       // TODO: Add your own code here to react to the marker being found.
     });
