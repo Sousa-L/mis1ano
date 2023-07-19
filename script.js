@@ -289,7 +289,7 @@ AFRAME.registerComponent('registerevents14', {
     });
   }
 });
-/*
+
 AFRAME.registerComponent('registerevents15', {
   init: function () {
     var marker = this.el;
@@ -310,7 +310,7 @@ AFRAME.registerComponent('registerevents15', {
     });
   }
 });
-*/
+
 AFRAME.registerComponent('registerevents18', {
   init: function () {
     var marker = this.el;
