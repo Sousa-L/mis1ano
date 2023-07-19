@@ -293,7 +293,7 @@ AFRAME.registerComponent('registerevents14', {
 AFRAME.registerComponent('registerevents15', {
   init: function () {
     var marker = this.el;
-    var entity = document.querySelector("#lab");
+    var entity = document.querySelector("#obras");
 
     marker.addEventListener('markerFound', function() {
       var markerId = marker.id;
