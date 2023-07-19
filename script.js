@@ -293,11 +293,11 @@ AFRAME.registerComponent('registerevents14', {
 AFRAME.registerComponent('registerevents15', {
   init: function () {
     var marker = this.el;
-    var entity = document.querySelector('[sound]');
+    var entity = document.querySelector("#lab");
 
     marker.addEventListener('markerFound', function() {
       var markerId = marker.id;
-      console.log("14");
+      console.log("15");
       entity.components.sound.playSound();
       // TODO: Add your own code here to react to the marker being found.
     });
