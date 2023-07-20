@@ -34,6 +34,7 @@
             <a-asset-item id="abs-asset" src="assets/Abstração.glb"></a-asset-item>
             <a-asset-item id="low-asset" src="assets/LOWPOLY.gltf"></a-asset-item>
             <a-asset-item id="exis-asset" src="assets/Eixos.gltf"></a-asset-item>
+            <a-asset-item id="lion-asset" src="assets/lion.gltf"></a-asset-item>
             <audio id="sound" src="assets/audio/maquete.mp3" preload="auto"></audio>
             <audio id="lab_rest" src="assets/audio/lab_rest.mp3" preload="auto"></audio>
             <audio id="obras_asset" src="assets/audio/obras.mp3" preload="auto"></audio>
@@ -248,6 +249,21 @@
                 gesture-handler>
             </a-entity>
             -->
+        </a-marker>
+
+        <!-- Spread 32 -->
+        <a-marker id="animated-marker" type='barcode' value='12' smooth="true"
+    smoothCount="10"
+    smoothTolerance=".01"
+    smoothThreshold="5"
+    raycaster="objects: .clickable"
+    emitevents="true"
+    cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity
+                gltf-model="#lion-asset"
+                scale="2 2 2" class="clickable"
+                gesture-handler>
+            </a-entity>
         </a-marker>
 
         <!-- Spread 40 -->
