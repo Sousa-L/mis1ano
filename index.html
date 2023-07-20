@@ -6,7 +6,21 @@
    <!-- Meta Tags -->
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   
-
+    <style>
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .arrow{
+            max-width: 1.8rem;
+            height: auto;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -20,6 +34,9 @@
 
 <body style='margin : 0px; overflow: hidden;'>
    <!-- minimal loader shown until image descriptors are loaded -->
+   <div class="header">
+    <img src="../assets/icons/thex.png" class="arrow rounded float-right" onclick="window.location.href = '/mis1ano';"/>
+  </div>
     <a-scene
         vr-mode-ui="enabled: false;"
         renderer="logarithmicDepthBuffer: true;"
