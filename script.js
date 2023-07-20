@@ -418,7 +418,7 @@ AFRAME.registerComponent('registerevents9', {
     marker.addEventListener('markerFound', function() {
       var markerId = marker.id;
       console.log("13");
-      window.location.href = "/mis1ano/atelie";
+      window.location.href = "/mis1ano/acervo";
       // TODO: Add your own code here to react to the marker being found.
     });
 
