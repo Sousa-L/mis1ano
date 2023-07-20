@@ -16,6 +16,10 @@
       color: white;
     }
 
+    .container {
+      padding-top: 20px;
+    }
+
     .book-page {
       max-width: 800px;
       margin: 0 auto;
@@ -60,10 +64,28 @@
       font-size: 0.85rem;
     }
 
+    .arrow{
+            max-width: 1.8rem;
+            height: auto;
+            z-index: 1;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
   </style>
 </head>
 
 <body>
+  <div class="header">
+    <img src="../assets/icons/thex.png" class="arrow rounded float-right" onclick="window.location.href = '/mis1ano';"/>
+  </div>
   <div class="container">
     <div class="book-page">
       <h2 class="book-title">MIS – MOVING TOWARDS AN EQUITABLE FUTURE<br>
@@ -108,10 +130,9 @@
       <p class="minor">
         <sup>4</sup> Haraway, Donna J., Staying with the trouble : Making Kin in the Chthulucene, Durham : Duke University Press, 2016., Series: Experimental, p.58      
       </p>
-      
     </div>
   </div>
-
+  
   <!-- Bootstrap JS and jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>

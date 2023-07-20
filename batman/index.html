@@ -43,10 +43,32 @@
       font-weight: bold;
     }
 
+    .arrow{
+            max-width: 1.8rem;
+            height: auto;
+            z-index: 1;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      padding-top: 20px;
+    }
+
   </style>
 </head>
 
 <body>
+  <div class="header">
+    <img src="../assets/icons/thex.png" class="arrow rounded float-right" onclick="window.location.href = '/mis1ano';"/>
+  </div>
   <div class="container">
     <div class="book-page">
       <h2 class="book-title">ONTEM CHOVEU NO FUTURO¹</h1>
