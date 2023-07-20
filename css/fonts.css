@@ -1,0 +1,16 @@
+/* fonts.css */
+@font-face {
+    font-family: "GroteskRegular";
+    src: url("../assets/fonts/regular.otf") format("otf"),;
+  }
+
+@font-face {
+    font-family: "GroteskBold";
+    src: url("../assets/fonts/bold.otf") format("otf");
+    font-weight: bold;
+  }
+  
+@font-face {
+    font-family: "GroteskLight";
+    src: url("../assets/fonts/light.otf") format("otf");
+  }

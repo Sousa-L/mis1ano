@@ -430,6 +430,82 @@ AFRAME.registerComponent('registerevents9', {
   }
 });
 
+AFRAME.registerComponent('registerevents5', {
+  init: function () {
+    var marker = this.el;
+
+    marker.addEventListener('markerFound', function() {
+      var markerId = marker.id;
+      console.log("13");
+      window.location.href = "/mis1ano/arquiteto";
+      // TODO: Add your own code here to react to the marker being found.
+    });
+
+    marker.addEventListener('markerLost', function() {
+      var markerId = marker.id;
+      console.log('markerLost', markerId);
+      // TODO: Add your own code here to react to the marker being lost.
+    });
+  }
+});
+
+AFRAME.registerComponent('registerevents1', {
+  init: function () {
+    var marker = this.el;
+
+    marker.addEventListener('markerFound', function() {
+      var markerId = marker.id;
+      console.log("13");
+      window.location.href = "/mis1ano/luisa";
+      // TODO: Add your own code here to react to the marker being found.
+    });
+
+    marker.addEventListener('markerLost', function() {
+      var markerId = marker.id;
+      console.log('markerLost', markerId);
+      // TODO: Add your own code here to react to the marker being lost.
+    });
+  }
+});
+
+AFRAME.registerComponent('registerevents4', {
+  init: function () {
+    var marker = this.el;
+
+    marker.addEventListener('markerFound', function() {
+      var markerId = marker.id;
+      console.log("13");
+      window.location.href = "/mis1ano/batman";
+      // TODO: Add your own code here to react to the marker being found.
+    });
+
+    marker.addEventListener('markerLost', function() {
+      var markerId = marker.id;
+      console.log('markerLost', markerId);
+      // TODO: Add your own code here to react to the marker being lost.
+    });
+  }
+});
+
+AFRAME.registerComponent('registerevents3', {
+  init: function () {
+    var marker = this.el;
+
+    marker.addEventListener('markerFound', function() {
+      var markerId = marker.id;
+      console.log("13");
+      window.location.href = "/mis1ano/silas";
+      // TODO: Add your own code here to react to the marker being found.
+    });
+
+    marker.addEventListener('markerLost', function() {
+      var markerId = marker.id;
+      console.log('markerLost', markerId);
+      // TODO: Add your own code here to react to the marker being lost.
+    });
+  }
+});
+
 /*
 AFRAME.registerComponent('registerevents6', {
   init: function () {
