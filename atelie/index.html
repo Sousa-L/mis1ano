@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>MIS 1 Ano</title>
+
+    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
+    <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <style>
+        .video-js{
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (min-aspect-ratio: 16/9) {
+        .video-js{
+            width: 100%;
+            height: auto;
+        }
+        }
+        @media (max-aspect-ratio: 16/9) {
+        .video-js {
+        
+        width:100%; 
+            height: 100%;
+
+            padding:0
+        }
+        }
+        body{
+        border:solid red;
+        }
+        .div-video{
+        object-fit:fill;
+        }
+        .arrow{
+            position: absolute;
+            max-width: 10%;
+            height: auto;
+            z-index: 1;
+        }
+    </style>
+    
+
+</head>
+<body>
+    <div class="div-video">
+        <video loop autoplay poster="../assets/posters/ontem.jpg" id="my-video"
+        class="video-js"
+        controls
+        data-setup="{}"
+        preload="auto">
+
+            <source src="../assets/videos/atelie.mp4" type="video/mp4">
+
+        </video>
+    
+        <img src="../assets/icons/arrow.png" class="arrow rounded float-left" onclick="window.location.href = '/mis1ano';"/>
+    </div>
+    <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+</body>
