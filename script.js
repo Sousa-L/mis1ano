@@ -392,7 +392,7 @@ AFRAME.registerComponent('registerevents13', {
   }
 });
 
-AFRAME.registerComponent('registerevents15', {
+AFRAME.registerComponent('registerevents16', {
   init: function () {
     var marker = this.el;
 
